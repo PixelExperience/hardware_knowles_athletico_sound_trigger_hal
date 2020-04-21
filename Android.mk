@@ -25,7 +25,7 @@ LOCAL_SRC_FILES := sound_trigger_hw_iaxxx.c cvq_util.c
 LOCAL_VENDOR_MODULE := true
 LOCAL_C_INCLUDES += external/tinyalsa/include \
 			$(call include-path-for, audio-route)
-LOCAL_HEADER_LIBRARIES := libhardware_headers
+LOCAL_HEADER_LIBRARIES := libhardware_headers generated_kernel_headers
 LOCAL_SHARED_LIBRARIES := liblog \
 			libcutils \
 			libtinyalsa \
@@ -48,6 +48,7 @@ LOCAL_LICENSE_CONDITIONS := notice
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_VENDOR_MODULE := true
 LOCAL_SRC_FILES := adnc_strm.c
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
 LOCAL_SHARED_LIBRARIES := liblog \
 			libcutils \
 			libtinyalsa \
@@ -66,6 +67,7 @@ LOCAL_LICENSE_KINDS := SPDX-license-identifier-Apache-2.0
 LOCAL_LICENSE_CONDITIONS := notice
 LOCAL_VENDOR_MODULE := true
 LOCAL_SRC_FILES := tunnel.c
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
 LOCAL_SHARED_LIBRARIES := liblog \
 			libcutils
 
@@ -78,6 +80,7 @@ LOCAL_LICENSE_KINDS := SPDX-license-identifier-Apache-2.0
 LOCAL_LICENSE_CONDITIONS := notice
 LOCAL_VENDOR_MODULE := true
 LOCAL_SRC_FILES := iaxxx_odsp_hw.c
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
 LOCAL_SHARED_LIBRARIES := liblog \
 			libcutils
 LOCAL_MODULE_TAGS := optional
@@ -94,6 +97,7 @@ LOCAL_VENDOR_MODULE := true
 LOCAL_SRC_FILES := tests/tunnel_test.c \
 			tests/conversion_routines.c
 LOCAL_32_BIT_ONLY := true
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
 LOCAL_SHARED_LIBRARIES := liblog \
 			libcutils \
 			libtunnel
@@ -110,6 +114,7 @@ LOCAL_LICENSE_KINDS := SPDX-license-identifier-Apache-2.0
 LOCAL_LICENSE_CONDITIONS := notice
 LOCAL_SRC_FILES := tests/sensor_param_test.c
 LOCAL_32_BIT_ONLY := true
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
 LOCAL_SHARED_LIBRARIES := liblog \
 			libutils \
 			libcutils \
@@ -127,7 +132,7 @@ LOCAL_SRC_FILES := tests/oslo_sound_model_control.cpp \
 			tests/oslo_iaxxx_sensor_control.c
 LOCAL_C_INCLUDES += external/tinyalsa/include \
 			$(call include-path-for, audio-route)
-LOCAL_HEADER_LIBRARIES := libhardware_headers
+LOCAL_HEADER_LIBRARIES := libhardware_headers generated_kernel_headers
 LOCAL_SHARED_LIBRARIES := liblog \
 			libutils \
 			libcutils \
@@ -146,7 +151,7 @@ LOCAL_LICENSE_KINDS := SPDX-license-identifier-Apache-2.0
 LOCAL_LICENSE_CONDITIONS := notice
 LOCAL_SRC_FILES := tests/oslo_data_injection_test.c
 LOCAL_32_BIT_ONLY := true
-LOCAL_HEADER_LIBRARIES := libhardware_headers
+LOCAL_HEADER_LIBRARIES := libhardware_headers generated_kernel_headers
 LOCAL_SHARED_LIBRARIES := liblog \
 			libutils \
 			libcutils \
@@ -161,7 +166,7 @@ LOCAL_LICENSE_KINDS := SPDX-license-identifier-Apache-2.0
 LOCAL_LICENSE_CONDITIONS := notice
 LOCAL_SRC_FILES := tests/oslo_config_test.c
 LOCAL_32_BIT_ONLY := true
-LOCAL_HEADER_LIBRARIES := libhardware_headers
+LOCAL_HEADER_LIBRARIES := libhardware_headers generated_kernel_headers
 LOCAL_SHARED_LIBRARIES := liblog \
 			libutils \
 			libcutils \
@@ -175,7 +180,7 @@ LOCAL_MODULE := oslo_get_stats
 LOCAL_LICENSE_KINDS := SPDX-license-identifier-Apache-2.0
 LOCAL_LICENSE_CONDITIONS := notice
 LOCAL_SRC_FILES := tests/oslo_get_stats.c
-LOCAL_HEADER_LIBRARIES := libhardware_headers
+LOCAL_HEADER_LIBRARIES := libhardware_headers generated_kernel_headers
 LOCAL_SHARED_LIBRARIES := liblog \
 			libutils \
 			libcutils \
@@ -191,6 +196,7 @@ LOCAL_LICENSE_KINDS := SPDX-license-identifier-Apache-2.0
 LOCAL_LICENSE_CONDITIONS := notice
 LOCAL_SRC_FILES := tests/spi_reliability_test.c
 LOCAL_32_BIT_ONLY := true
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
 LOCAL_SHARED_LIBRARIES := liblog \
 			libcutils
 
@@ -204,6 +210,7 @@ LOCAL_LICENSE_KINDS := SPDX-license-identifier-Apache-2.0
 LOCAL_LICENSE_CONDITIONS := notice
 LOCAL_SRC_FILES := ./tests/oslo_package_test.c
 LOCAL_32_BIT_ONLY := true
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
 LOCAL_SHARED_LIBRARIES := liblog \
 			libcutils \
 			libtinyalsa
@@ -218,6 +225,7 @@ LOCAL_LICENSE_KINDS := SPDX-license-identifier-Apache-2.0
 LOCAL_LICENSE_CONDITIONS := notice
 LOCAL_SRC_FILES := tests/tunnel_test_sensor.c
 LOCAL_32_BIT_ONLY := true
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
 LOCAL_SHARED_LIBRARIES := liblog
 
 include $(BUILD_EXECUTABLE)
@@ -232,6 +240,7 @@ LOCAL_VENDOR_MODULE := true
 LOCAL_SRC_FILES := tests/odsp_api_test.c
 LOCAL_C_INCLUDES += ./tests/
 LOCAL_32_BIT_ONLY := true
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
 LOCAL_SHARED_LIBRARIES := liblog \
 			libcutils \
 			libodsp
@@ -247,6 +256,7 @@ LOCAL_LICENSE_KINDS := SPDX-license-identifier-Apache-2.0
 LOCAL_LICENSE_CONDITIONS := notice
 LOCAL_SRC_FILES := tests/dump_debug_info.c
 LOCAL_32_BIT_ONLY := true
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
 LOCAL_SHARED_LIBRARIES := liblog
 
 include $(BUILD_EXECUTABLE)
@@ -260,6 +270,7 @@ LOCAL_LICENSE_KINDS := SPDX-license-identifier-Apache-2.0
 LOCAL_LICENSE_CONDITIONS := notice
 LOCAL_SRC_FILES := tests/crash_event_logger.c tests/crash_analyzer.c
 LOCAL_32_BIT_ONLY := true
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
 LOCAL_SHARED_LIBRARIES := liblog libcutils
 LOCAL_MODULE_TAGS := optional
 
@@ -273,6 +284,7 @@ LOCAL_LICENSE_KINDS := SPDX-license-identifier-Apache-2.0
 LOCAL_LICENSE_CONDITIONS := notice
 LOCAL_SRC_FILES := tests/setparamblk_test.c
 LOCAL_32_BIT_ONLY := true
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
 LOCAL_SHARED_LIBRARIES := libcutils \
 			libodsp
 
@@ -286,6 +298,7 @@ LOCAL_SRC_FILES := tests/crash_trigger_test.c
 LOCAL_VENDOR_MODULE := true
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/../hal
 LOCAL_32_BIT_ONLY := true
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
 LOCAL_SHARED_LIBRARIES := liblog libodsp
 
 include $(BUILD_EXECUTABLE)
@@ -298,6 +311,7 @@ LOCAL_SRC_FILES := tests/plugin_status_test.c
 LOCAL_VENDOR_MODULE := true
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/
 LOCAL_32_BIT_ONLY := true
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
 LOCAL_SHARED_LIBRARIES := libcutils libodsp
 
 include $(BUILD_EXECUTABLE)
@@ -310,6 +324,7 @@ LOCAL_VENDOR_MODULE := true
 LOCAL_SRC_FILES := tests/get_pwr_stats.c
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/
 LOCAL_32_BIT_ONLY := true
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
 LOCAL_SHARED_LIBRARIES := libcutils liblog
 
 include $(BUILD_EXECUTABLE)
